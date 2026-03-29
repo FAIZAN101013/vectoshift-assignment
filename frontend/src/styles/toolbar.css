@@ -1,0 +1,86 @@
+/* ── Toolbar shell ─────────────────────────────── */
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #111827;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.4),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 0 16px;
+}
+
+/* ── Top row — title + actions ─────────────────── */
+.toolbar-top {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  gap: 12px;
+}
+
+.toolbar-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+}
+
+.toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+/* ── Action buttons ────────────────────────────── */
+.toolbar-btn {
+  height: 30px;
+  padding: 0 12px;
+  border-radius: 7px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.15s, color 0.15s;
+}
+.toolbar-btn:hover  { background: rgba(255, 255, 255, 0.10); color: #e2e8f0; }
+.toolbar-btn.primary {
+  background: #2563eb;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+.toolbar-btn.primary:hover { background: #1d4ed8; }
+
+.toolbar-divider {
+  width: 0.5px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+/* ── Node palette row ──────────────────────────── */
+.toolbar-inner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 0 12px;
+  overflow-x: auto;          /* scroll, don't wrap */
+  scrollbar-width: none;     /* Firefox */
+}
+.toolbar-inner::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+
+.toolbar-section-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #475569;
+  white-space: nowrap;
+  flex-shrink: 0;
+}

@@ -1,0 +1,71 @@
+/* ── Design tokens ─────────────────────────────── */
+.draggable-node {
+  --chip-accent: #3b82f6;
+  --chip-bg: #1c2333;
+  --chip-border: rgba(255, 255, 255, 0.08);
+  --chip-hover-bg: #252e42;
+  --font: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ── Chip ──────────────────────────────────────── */
+.draggable-node {
+  cursor: grab;
+  min-width: 80px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 13px;
+  border-radius: 9px;
+  background: var(--chip-bg);
+  color: #cbd5e1;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font);
+  letter-spacing: -0.01em;
+  border: 0.5px solid var(--chip-border);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background  0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    transform   0.18s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow  0.18s;
+}
+
+/* ── States ────────────────────────────────────── */
+.draggable-node:hover {
+  background: var(--chip-hover-bg);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.draggable-node:active {
+  cursor: grabbing;
+  transform: scale(0.97) translateY(0);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ── Color dot ─────────────────────────────────── */
+.draggable-node-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--chip-accent);
+  flex-shrink: 0;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* ── Label ─────────────────────────────────────── */
+.draggable-node-label {
+  pointer-events: none;
+}
