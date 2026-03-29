@@ -61,7 +61,7 @@
 /* ── Title ─────────────────────────────────────── */
 .base-node-title {
   font-size: 13px;
-  font-weight: 500;              /* was 600 — slightly lighter feels more refined */
+  font-weight: 500;              
   letter-spacing: -0.01em;
   color: #111827;
   flex: 1;
@@ -139,12 +139,12 @@ textarea.base-node-input {
   resize: none;
 }
 
-/* 🔥 REQUIRED FOR HANDLES */
+/* REQUIRED FOR HANDLES */
 .base-node {
   position: relative;
 }
 
-/* 🔥 LEFT dynamic handles */
+/*  LEFT dynamic handles */
 .text-node-handle {
   position: absolute !important;
   left: -6px !important;
@@ -155,7 +155,7 @@ textarea.base-node-input {
   z-index: 10;
 }
 
-/* 🔥 ensure ReactFlow handles visible */
+/*  ensure ReactFlow handles visible */
 .react-flow__handle {
   opacity: 1 !important;
 }

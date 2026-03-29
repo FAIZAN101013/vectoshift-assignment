@@ -10,7 +10,7 @@ export const TextNode = ({ id, data }) => {
 
   const text = data.text || '';
 
-  // ✅ extract valid JS variables
+  //  extract valid JS variables
   const matches =
     text.match(/{{\s*([a-zA-Z_$][a-zA-Z0-9_$]*)\s*}}/g) || [];
 
@@ -20,7 +20,7 @@ export const TextNode = ({ id, data }) => {
     )
   )];
 
-  // 🔥 CRITICAL FIX
+  //  CRITICAL FIX
   useEffect(() => {
     updateNodeInternals(id);
   }, [variables, id, updateNodeInternals]);

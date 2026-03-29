@@ -124,7 +124,7 @@ export const BaseNode = ({
         </div>
       )}
 
-      {/* ── ReactFlow Handles (invisible connectors) ── */}
+     
       {handles.map((handle, i) => (
         <Handle
           key={handle.id ?? i}
